@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "English Master",
+  "description": "English Reader",
+  "version": "1.0",
+  "icons": {
+    "16": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["/src/index.js"]
+    }
+  ],
+  "permissions": [
+    "contextMenus",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "/src/background.js",
+    "type": "module"
+  }
+}
